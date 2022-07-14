@@ -2,6 +2,7 @@ body {
     text-align: center;
     font-family: 'merriweather', serif;
     margin: 0;
+    
 }
 
 /* general stuff */
@@ -10,6 +11,11 @@ body {
     background-color: #e4f9f5;
     padding: 50px;
 }
+.mountain {
+    display: block;
+    width: 100%;
+}
+ 
 
 .initial-padding {
     padding: 90px 15px;
@@ -28,6 +34,10 @@ h1 {
     color: #66bfbf;
 
 }
+.name{
+    font-size: 60px;
+    letter-spacing: 1px;
+}
 
 h2 {
     font-family: 'Montserrat', sans-serif;
@@ -43,7 +53,6 @@ h2 {
 .intro {
     width: 30%;
     margin: auto;
-
 }
 
 p {
@@ -52,39 +61,46 @@ p {
 
 .top-cloud {
     position: absolute;
-    right: 15%;
+    left: 60%;
     top: 1%;
 }
 
 
 .buttom-cloud {
     position: absolute;
+    left: 10%;
 
 }
-
-.image1,
-.image2 {
-    width: 20%;
-
-
+.middle-container{
+    padding: 15px;
 }
 
+.middle-container img{
+width: 266px;
+margin: auto;
+}
+
+/* for the images in the second container */
 .skill-row {
-    width: 40%;
-    margin: 0 auto;
+    width: 60%;
     display: flex;
+    flex-direction:row;
+     margin: 0 auto;
     text-align: left;
     column-gap: 50px;
     padding: 30px;
-
+}
+.image{
+    width: 155px;
+ margin: auto;
 
 }
-
-.skill-column {
-    display: flex;
-    flex-direction: row-reverse;
-
+.adjustedimage{
+    order: 1;
 }
+
+
+
 
 .hr {
     border: 8px #66bfbf dotted;
@@ -93,15 +109,6 @@ p {
 
 
 }
-
-.free {
-    font-family: "montserrat" serif;
-    color: #66bfbf;
-}
-
-
-
-
 
 .button {
     background-color: aqua;
@@ -116,14 +123,17 @@ p {
 
 }
 
+
+
 .contact a:hover{ 
-    background-color:rgb(5, 61, 129);
+    background-color:rgb(21, 172, 199);
 
 }
 
 .foot {
     background-color: rgb(8, 139, 190);
-  padding: 60px 0px 60px ;
+  padding: 30px 0px 10px ;
+ 
  
   
 
@@ -132,11 +142,19 @@ p {
 .foot a{
     font-size: 25px;
     text-decoration: none;
-    margin: 20px 10px;
+    margin: 60px 40px;
+   color: white;
     
 }
 .foot p{
  color: #66bfbf ;
+}
+.contact {
+    width: 60%;
+    margin: auto;
+    font-size: 1.2rem;
+
+
 }
 
 
@@ -145,36 +163,36 @@ p {
 
 
 /* medium devices; media query--tablets 820px */
-@media screen and (max-width:51.25rem) {
+@media screen and(max-width:51.25rem) {
     
-    .img2 {
-        width: 60%;
-    }
+   
+     
 
     .intro {
-        width: 60%;
+        width: 80%;
         text-align: center;
         margin: 0 auto;
         font-size: 25px;
     }
 
-    .skill-row,
-    .skill-row {
+    .skill-row{
         display: flex;
-        flex-direction: column;
+        flex-direction:column;
         width: 80%;
         text-align: center;
         font-size: 25px;
 
     }
 
-    .image1,
-    .image2 {
-        margin: auto;
-        width: 50%;
+    .image,
+    .image {
+        width: 27%;
+        margin:auto
+        }
 
-
-    }
+        .adjustedimage{
+            order: 0;
+        }
 
     .contact {
         width: 80%;
@@ -187,63 +205,128 @@ p {
 
 }
 
+/* devices of about 609px */
+@media screen and(max-width:38.06rem) {
+
+    .foot a { font-size: 20px;
+        margin: 10px 10px;
+    }
+    .foot p {
+        font-size:15px
+    }
+    .middle-container img{
+        width: 300px;
+        margin: auto;
+        padding: 8px;
+        }
+    
+}
+
 /* for mobile phone; media query- smartphones& L-smartphones 480 */
 
-@media screen and (max-width: 30rem) {
-    .mountain {
+@media screen and(max-width: 30rem) {
+     .mountain {
         display: block;
         width: 100%;
     }
-
-
-
-    .buttom-cloud {
-        display: block;
+      .buttom-cloud {
+        display: block; 
         width: 30%;
     }
-
-
-
-
-
-    .image1,
-    .image2 {
-        width: 50%;
-        margin: auto;
-        
-    }
-
-    .contact {
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    .contact p{
-        width: 100%;
-        text-align: center;
-        margin: 0 auto;
-        font-size: 22px
-    }
+    .contact p {
+        font-size: 15px;
+        }
    
     .intro {
-        width: 100%;
-        text-align: center;
-        margin: 0 auto;
-        font-size: 23px;
+        width: 80%;   
+        font-size: 15px;
     }
-    
-    .buttom-container p{
-        width: 100%;
+    .skill-row p{
+        width: 80%;
         text-align: center;
         margin: 0 auto;
-        font-size: 22px;
+        font-size: 15px;
     }
     .foot a{
-        
-        margin: 5px 5px;}
-    
-    
-    
+         margin: 5px 5px;
+        }
 
+}
+
+/* for devices of 432px */
+@media screen and(max-width:27rem)  {
+    .name{
+        font-size: 50px;
+        }    
+}
+
+/* for devices of 400px */
+@media screen and(max-width: 21.8rem) {
+    /* .top-cloud {
+        
+       
+        left: 30%;
+        top: 15rem;
+    } */
+    
+}
+
+/* FOR SMAllPHONE sizes ( 320px ) */
+@media screen and(max-width:20rem)
+{
+  
+.middle-container img{
+    width: 200px;
+    margin: auto;
+    padding: 5px;
+    }
+    .top-cloud {
+        position: absolute;
+        left: 40%;
+        top: 1%;
+    }
+  
+    
+    .foot p{
+        font-size: 10px;
+    }
+    .foot a{font-size: 10px;
+         margin: 2px 2px;} 
+
+        .skill-row p {
+            font-size: 8px;
+
+        }
+        .contact p {
+            font-size: 10px;
+            }
+            .contact h1 {
+                font-size: 2rem
+            }
+            h2 {
+                font-family: 'Montserrat', sans-serif;
+                color: #66bfbf;
+                font-size: 1rem;
+            
+            }
+        .intro {
+            width: 80%;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 10px;
+        }
+
+        .button {
+            padding: 5px 5px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top:20px ;
+            font-size: 15px;
+            font-family: sans-serif;
+        
+        }
+
+    
+        
 
 }
